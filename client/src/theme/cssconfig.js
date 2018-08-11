@@ -1,8 +1,8 @@
 const theme = {
     containerHeight: '100vh',
     fontStyles: {
-        header: 20,
-        paragraph: 14,
+        header: '20px',
+        paragraph: '14px',
         headerFont: 'Medula One, cursive',
         bodyFont: 'Caudex, serif',
     },

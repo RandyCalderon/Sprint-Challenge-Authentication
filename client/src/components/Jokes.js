@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { Header, JokeWrapper } from '../theme/css';
+import { JokesWrapper, JokesBanner, JokesHeader, JokesFlex, Header, Body, JokeWrapper } from '../theme/css';
 
 export default class Jokes extends Component {
     state = {
@@ -25,16 +25,19 @@ export default class Jokes extends Component {
 
     render() {
         return(
-            <div>
+            <JokesWrapper>
+                <JokesBanner><JokesHeader>Jokes of the Day</JokesHeader></JokesBanner>
+                <JokesFlex>
                 {this.state.jokes.map(joke => {
                     return(
-                    <JokeWrapper key={joke.id}>
-                    <Header key={joke.id}>{joke.setup}</Header>
-                    <p key={joke.id}>{joke.punchline}</p>
+                    <JokeWrapper key={joke.index}>
+                    <Header key={joke.setup}>{joke.setup}</Header>
+                    <Body key={joke.punchline}>{joke.punchline}</Body>
                     </JokeWrapper>
                     )
             })}
-            </div>
+            </JokesFlex>
+            </JokesWrapper>
         )
     }
 }
