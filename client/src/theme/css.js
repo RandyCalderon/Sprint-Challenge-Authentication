@@ -1,5 +1,18 @@
 import styled from 'react-emotion';
 
+// App Wrapper
+
+const AppWrapper = styled('div')`
+    position: relative;
+    top: -22px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 62.5%;
+    font: inherit;
+    vertical-align: baseline;
+`
+
 // Jokes Component
 const JokesWrapper = styled('div')`
     max-width: 1080px;
@@ -13,8 +26,6 @@ const JokesBanner = styled('div')`
     width: 100%;
     height: 60px;
     background: ${props => props.theme.colorPalette.primaryColortwo};
-    margin: 0 auto;
-
 `
 const JokesHeader = styled('h1')`
     color: white;
@@ -37,7 +48,7 @@ const Body = styled('p')`
 const JokesFlex = styled('div')`
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
 `
 
 const JokeWrapper = styled('div')`
@@ -49,4 +60,4 @@ const JokeWrapper = styled('div')`
     color: white;
 `
 
-export {JokesWrapper, JokesBanner, JokesHeader, JokesFlex, JokeWrapper, Header, Body };
+export {AppWrapper, JokesWrapper, JokesBanner, JokesHeader, JokesFlex, JokeWrapper, Header, Body };

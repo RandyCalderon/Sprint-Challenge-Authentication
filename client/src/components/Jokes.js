@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { JokesWrapper, JokesBanner, JokesHeader, JokesFlex, Header, Body, JokeWrapper } from '../theme/css';
+import {JokesWrapper, JokesBanner, JokesHeader, JokesFlex, Header, Body, JokeWrapper } from '../theme/css';
 
 export default class Jokes extends Component {
     state = {
